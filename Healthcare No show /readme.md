@@ -19,3 +19,5 @@ Insight:
 9- Predictive scheduling can reduce resource wastage.
 
 10- Hospitals can use overbooking strategies based on predicted no-shows.
+
+tableau- https://public.tableau.com/views/Healthcare_17715869312550/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
