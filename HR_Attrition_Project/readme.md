@@ -1,39 +1,51 @@
 Key Insights (Employee Attrition Analysis)
 
-Overall Attrition Trend
+1-Overall Attrition Trend:
+
 A significant portion of employees have left the company, indicating a noticeable attrition problem.
 
 
-Department-wise Attrition
+2-Department-wise Attrition:
+
 The Sales department shows the highest attrition rate compared to other departments.
 
 
-Salary Impact
+3-Salary Impact:
+
 Employees with lower monthly income are more likely to leave the organization.
 
 
-Experience / Tenure Factor
+4-Experience / Tenure Factor:
+
 Employees with fewer years at the company show higher attrition, especially in the early stage.
 
 
-Age Group Analysis
+5-Age Group Analysis:
+
 Younger employees tend to leave more frequently than older, experienced employees.
 
-Job Role Influence
+6-Job Role Influence:
+
 Certain roles (like Sales Executive / Laboratory Technician) have higher attrition rates.
 
 
-Promotion Effect
+7-Promotion Effect:
+
 Employees who have not received promotions for a long time are more likely to resign.
 
 
-Work-Life Balance
+8-Work-Life Balance:
+
 Poor work-life balance is strongly associated with higher attrition.
 
 
-Model Prediction Performance
+9-Model Prediction Performance:
+
 The machine learning models (Logistic Regression & Decision Tree) successfully predicted attrition with good accuracy.
-Feature Importance (SHAP Analysis)
+
+
+10-Feature Importance (SHAP Analysis):
+
 Key factors influencing attrition include:
 Monthly Income
 Years at Company
