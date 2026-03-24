@@ -12,18 +12,17 @@ from sklearn.preprocessing import LabelEncoder
 # Create output folder
 os.makedirs("output", exist_ok=True)
 
-# -----------------------------
+
 # 1. Load Dataset
-# -----------------------------
+
 file_path = "data/KaggleV2-May-2016.csv"
 df = pd.read_csv(file_path)
 
 print("Dataset Shape:", df.shape)
 print(df.head())
 
-# -----------------------------
+
 # 2. Data Cleaning
-# -----------------------------
 
 # Convert date columns
 df['ScheduledDay'] = pd.to_datetime(df['ScheduledDay'])
@@ -50,10 +49,8 @@ df.rename(columns={'No-show': 'No_show',
 # Drop unnecessary columns
 df.drop(['PatientId', 'AppointmentID', 'ScheduledDay', 'AppointmentDay'], axis=1, inplace=True)
 
-# -----------------------------
-# 3. Feature Engineering
-# -----------------------------
 
+# 3. Feature Engineering
 # Age cleaning
 df = df[df['Age'] >= 0]
 
@@ -71,10 +68,8 @@ df['Neighbourhood'] = le_neighbourhood.fit_transform(df['Neighbourhood'])
 df.to_csv("output/cleaned_data.csv", index=False)
 print("Cleaned data saved to output/cleaned_data.csv")
 
-# -----------------------------
-# 4. Model Training
-# -----------------------------
 
+# 4. Model Training
 X = df.drop('No_show', axis=1)
 y = df['No_show']
 
@@ -85,9 +80,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 model = DecisionTreeClassifier(max_depth=6, random_state=42)
 model.fit(X_train, y_train)
 
-# -----------------------------
 # 5. Model Evaluation
-# -----------------------------
 
 y_pred = model.predict(X_test)
 
