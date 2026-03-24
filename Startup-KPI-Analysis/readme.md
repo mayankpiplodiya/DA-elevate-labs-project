@@ -1,5 +1,5 @@
 
-1) The startup shows a consistent revenue trend, indicating steady business performance across the observed period.
+1)The startup shows a consistent revenue trend, indicating steady business performance across the observed period.
    
 2)The burn rate is relatively high in some periods, suggesting that operational and marketing expenses are significant.
 
