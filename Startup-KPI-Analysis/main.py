@@ -103,7 +103,7 @@ def main():
     except Exception as e:
         print("⚠ Google Sheets Upload Skipped:", e)
 
-    print("\n🚀 PROJECT COMPLETED SUCCESSFULLY!")
+    print("\nPROJECT COMPLETED SUCCESSFULLY!")
 
 # RUN
 if __name__ == "__main__":
