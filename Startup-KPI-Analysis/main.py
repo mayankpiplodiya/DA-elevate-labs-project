@@ -8,7 +8,7 @@ import os
 
 def load_data():
     df = pd.read_csv("data/50_Startups.csv")
-    print("✅ Data Loaded Successfully")
+    print("Data Loaded Successfully")
     return df
 
 
@@ -38,7 +38,7 @@ def process_data(df):
     # LTV:CAC Ratio
     df['LTV_CAC_Ratio'] = df['LTV'] / df['CAC']
 
-    print("✅ KPI Calculations Done")
+    print(" KPI Calculations Done")
     return df
 
 # 4. COHORT ANALYSIS
@@ -47,7 +47,7 @@ def cohort_analysis(df):
     df['Month'] = pd.date_range(start='2023-01-01', periods=len(df), freq='ME')
     df['Cohort'] = df['Month'].dt.to_period('M')
 
-    print("✅ Cohort Analysis Done")
+    print(" Cohort Analysis Done")
     return df
 
 # 5. SAVE OUTPUT
@@ -56,7 +56,7 @@ def save_output(df):
     os.makedirs("output", exist_ok=True)
     df.to_csv("output/startup_kpi_output.csv", index=False)
 
-    print("✅ CSV Saved in /output folder")
+    print("CSV Saved in /output folder")
 
 
 # 6. UPLOAD TO GOOGLE SHEETS
@@ -87,7 +87,7 @@ def upload_to_sheets(df):
     # Upload new data
     sheet.update([df.columns.values.tolist()] + df.values.tolist())
 
-    print("✅ Data uploaded to Google Sheets!")
+    print("Data uploaded to Google Sheets!")
 
 # 7. MAIN FUNCTION
 
