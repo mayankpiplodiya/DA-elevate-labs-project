@@ -96,9 +96,7 @@ pred_df.to_csv("output/model_predictions.csv", index=False)
 
 print("Predictions saved to output/model_predictions.csv")
 
-# -----------------------------
 # 6. Feature Importance
-# -----------------------------
 
 importance = pd.DataFrame({
     'Feature': X.columns,
@@ -109,9 +107,7 @@ importance.to_csv("output/feature_importance.csv", index=False)
 
 print("Feature importance saved to output/feature_importance.csv")
 
-# -----------------------------
-# 7. Simple No-show Statistics (for Tableau insight reference)
-# -----------------------------
 
+# 7. Simple No-show Statistics (for Tableau insight reference)
 noshow_rate = df['No_show'].mean()
 print("\nOverall No-show Rate:", round(noshow_rate * 100, 2), "%")
